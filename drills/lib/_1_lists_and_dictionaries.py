@@ -47,6 +47,10 @@ def average(lst):
 # Example:
 #   Call:    lowest_squared([5, 3, 44, 7])
 #   Returns: 9
+def lowest_squared(lst):
+    lower_number = min(lst)
+    return lower_number * lower_number
+
 
 
 
