@@ -31,6 +31,13 @@ def fourth_element(lst):
 # Example:
 #   Call:    average([3, 1, 44, 1])
 #   Returns: 12.25
+def average(lst):
+    sum_average = sum(lst)
+    count = len(lst)
+    if count == 0:
+        return 0
+    return sum_average / count 
+    
 
 
 
