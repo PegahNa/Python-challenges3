@@ -60,6 +60,10 @@ def lowest_squared(lst):
 # Example:
 #   Call:    highest_squared([5, 3, 44, 7])
 #   Returns: 1936
+def highest_squared(lst):
+    higher_number = max(lst)
+    return higher_number * higher_number
+
 
 
 
