@@ -20,6 +20,8 @@
 # Example:
 #   Call:    fourth_element([1, 2, 3, 4, 5])
 #   Returns: 4
+def fourth_element(lst):
+    return lst[3]
 
 
 
