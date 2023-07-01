@@ -260,6 +260,10 @@ def values_summed(dic):
 # Example:
 #   Call:    add_key_value_pair({'cat': 4, 'person': 2, 'centipede': 100}, 'dog', 4)
 #   Returns: {'cat': 4, 'person': 2, 'centipede': 100, 'dog': 4}
+def add_key_value_pair(dic, key, value):
+    dic[key] = value
+    return dic  
+
 
 
 
@@ -269,6 +273,11 @@ def values_summed(dic):
 # Example:
 #   Call:    remove_key_value_pair({'cat': 4, 'person': 2, 'centipede': 100}, 'cat')
 #   Returns: {'person': 2, 'centipede': 100}
+def remove_key_value_pair(dic, key):
+    if key in dic:
+        del dic[key]
+    return dic
+
 
 
 
@@ -278,8 +287,15 @@ def values_summed(dic):
 # Example:
 #   Call:    where_value_below({'cat': 4, 'person': 2, 'centipede': 100}, 5)
 #   Returns: {'cat': 4, 'person': 2}
+def where_value_below(dic, number):
+    result = {}
+    for key, value in dic.items():
+        if value < number:
+            result[key] = value
+    return result        
 
 
+        
 
 # Method name: where_key_starts_with
 # Purpose: returns key value pairs where the key starts with the letter provided
@@ -287,5 +303,10 @@ def values_summed(dic):
 # Example:
 #   Call:    where_key_starts_with({'cat': 4, 'person': 2, 'centipede': 100}, 'c')
 #   Returns: {'cat': 4, 'centipede': 100}
-
+def where_key_starts_with(dic, letter):
+    result = {}
+    for key, value in dic.items():
+        if key[0] == letter:
+            result[key] = value
+    return result 
 
