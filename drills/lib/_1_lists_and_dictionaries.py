@@ -73,6 +73,12 @@ def highest_squared(lst):
 # Example:
 #   Call:    starts_with_a(['banana', 'apple', 'orange', 'avocado'])
 #   Returns: ['apple', 'avocado']
+def starts_with_a(lst):
+    result = []
+    for item in lst:
+        if item.startswith('a'):
+            result.append(item)
+    return result
 
 
 
@@ -82,6 +88,13 @@ def highest_squared(lst):
 # Example:
 #   Call:    starts_with_a_vowel(['banana', 'apple', 'orange', 'avocado'])
 #   Returns: ['apple', 'orange', 'avocado']
+def starts_with_a_vowel(lst):
+    result = []
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for item in lst:
+        if item.lower().startswith(tuple(vowels)):
+            result.append(item)
+    return result
 
 
 
@@ -91,6 +104,12 @@ def highest_squared(lst):
 # Example:
 #   Call:    reverse_each_element(['one', 'two'])
 #   Returns: ['eno', 'owt']
+def reverse_each_element(lst):
+    result = []
+    for item in lst:
+        reversed_item = item[::-1]
+        result.append(reversed_item)
+    return result
 
 
 
@@ -100,6 +119,11 @@ def highest_squared(lst):
 # Example:
 #   Call:    sort_by_last_letter(['banana', 'apple', 'carrot', 'avocado'])
 #   Returns: ['banana', 'apple', 'avocado', 'carrot']
+def sort_by_last_letter(lst):
+    result = sorted(lst, key=lambda x: x[-1])
+    return result 
+       
+        
 
 
 
@@ -109,6 +133,13 @@ def highest_squared(lst):
 # Example:
 #   Call:    greater_than_5([9, 3, 44, 7])
 #   Returns: [9, 44, 7]
+def greater_than_5(lst):
+    result = []
+    for item in lst:
+        if item > 5:
+            result.append(item)
+    return result 
+        
 
 
 
@@ -118,6 +149,12 @@ def highest_squared(lst):
 # Example:
 #   Call:    greater_than([9, 3, 6, 44, 7, 7], 6)
 #   Returns: [9, 44, 7, 7]
+def greater_than(lst, number):
+    result = []
+    for item in lst:
+        if item > number:
+            result.append(item)
+    return result
 
 
 
@@ -127,6 +164,12 @@ def highest_squared(lst):
 # Example:
 #   Call:    less_than([9, 3, 6, 44, 1, 7, 7], 6)
 #   Returns: [3, 1]
+def less_than(lst, number):
+    result = []
+    for item in lst:
+        if item < number:
+            result.append(item)
+    return result 
 
 
 
@@ -136,6 +179,13 @@ def highest_squared(lst):
 # Example:
 #   Call:    words_shorter_than(['banana', 'apple', 'orange', 'nut', 'avocado'], 6)
 #   Returns: ['apple', 'nut']
+def words_shorter_than(lst, number):
+    result = []
+    for item in lst:
+        if len(item) < number:
+            result.append(item)
+    return result
+
 
 
 
@@ -147,6 +197,12 @@ def highest_squared(lst):
 #   Returns: False
 #   Call:    all_above([9, 3, 6, 44, 1, 7, 7], 0)
 #   Returns: True
+def all_above(lst, number):
+    for item in lst:
+        if item > number:
+            return True
+        else:
+            return False
 
 
 
