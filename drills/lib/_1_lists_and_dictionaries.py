@@ -214,6 +214,11 @@ def all_above(lst, number):
 #   Returns: False
 #   Call:    all_below([9, 3, 6, 44, 1, 7, 7], 100)
 #   Returns: True
+def all_below(lst, number):
+    for item in lst:
+        if item >= number:
+            return False
+    return True
 
 
 
@@ -223,6 +228,13 @@ def all_above(lst, number):
 # Example:
 #   Call:    multiply_each_by([9, 3, 6, 44, 1, 7, 7], 2)
 #   Returns: [18, 6, 12, 88, 2, 14, 14]
+def multiply_each_by(lst, number):
+    result = []
+    for item in lst:
+        multiply = item * number
+        result.append(multiply)
+    return result
+
 
 
 
