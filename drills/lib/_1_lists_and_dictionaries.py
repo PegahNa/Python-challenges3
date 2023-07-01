@@ -246,6 +246,11 @@ def multiply_each_by(lst, number):
 # Example:
 #   Call:    values_summed({'cat': 4, 'person': 2, 'centipede': 100})
 #   Returns: 106
+def values_summed(dic):
+    total = 0
+    for values in dic.values():
+        total += values
+    return total
 
 
 
