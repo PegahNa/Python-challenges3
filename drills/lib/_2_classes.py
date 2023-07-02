@@ -149,6 +149,28 @@ class Basket():
 #   0.875
 #   > calculator.list_history()
 #   [3, 12, -1, 0.875]
+class Calculator():
+    def __init__(self):
+        self.history = []
+        
+    def add(self, number1, number2):
+        result = number1 + number2
+        self.history.append(result)
+        return result
+    
+    def multiply(self, number1, number2):
+        result = number1 * number2
+        self.history.append(result)
+        return result
+    
+    def divide(self, number1, number2):
+        result = number1 / number2
+        self.history.append(result)
+        return result
+    
+    def list_history(self):
+        return self.history
+
 
 
 
