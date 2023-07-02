@@ -163,6 +163,13 @@ class Calculator():
         self.history.append(result)
         return result
     
+    def subtract(self, number1, number2):
+        result = number1 - number2
+        self.history.append(result)
+        return result
+    
+
+    
     def divide(self, number1, number2):
         result = number1 / number2
         self.history.append(result)
@@ -211,9 +218,6 @@ class  Cohort():
         employed_students = [student for student in self.students if student['employer'] == employer]
         return employed_students
     
-   
-
-
 
 
 # Class name: Person
@@ -250,4 +254,26 @@ class  Cohort():
 #   > person.get_pets()
 #   'Alex has 3 pets: a cat called Arthur, a dog called Judith, a goldfish called Gwen'
 
+class Person:
+    def __init__(self, data):
+        self.name = data['name']
+        self.pets = data['pets']
+        self.addresses = data['addresses']
 
+    def get_work_address(self):
+        for address in self.addresses:
+            if address['name'] == 'work':
+                return f"{address['building']} {address['street']}"
+
+    def get_home_address(self):
+        for address in self.addresses:
+            if address['name'] == 'home':
+                return f"{address['building']} {address['street']}"
+
+    def get_pets(self):
+        pet_count = len(self.pets)
+        pet_summary = []
+        for pet in self.pets:
+            pet_summary.append(f"a {pet['animal']} called {pet['name']}")
+        pets_str = ', '.join(pet_summary)
+        return f"{self.name} has {pet_count} pets: {pets_str}"
