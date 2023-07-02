@@ -197,6 +197,22 @@ class Calculator():
 #   [{'name' : 'Jo', 'employer' : 'NASA'}, {'name' : 'Alex', 'employer' : 'NASA'}, {'name' : 'Bobby', 'employer' : 'Google'}]
 #   > cohort.list_employed_by('NASA')
 #   [{'name' : 'Jo', 'employer' : 'NASA'}, {'name' : 'Alex', 'employer' : 'NASA'}]
+class  Cohort():
+    def __init__(self):
+        self.students = []
+        
+    def add_student(self, student):
+        self.students.append(student)
+    
+    def list_students(self):
+        return self.students
+    
+    def list_employed_by(self, employer):
+        employed_students = [student for student in self.students if student['employer'] == employer]
+        return employed_students
+    
+   
+
 
 
 
