@@ -87,7 +87,6 @@ class Greeter():
 
 
 
-
 # Class name: Basket
 # Purpose: store a list of items
 # Methods:
@@ -106,6 +105,15 @@ class Greeter():
 #   > basket.add('orange')
 #   > basket.list_items()
 #   ['apple', 'banana', 'orange']
+class Basket():
+     def __init__(self):
+        self.items = []
+        
+     def add(self, item):
+        self.items.append(item)
+    
+     def list_items(self):
+        return self.items
 
 
 
