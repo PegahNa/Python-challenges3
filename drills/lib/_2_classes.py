@@ -33,8 +33,16 @@
 #         return 'Hello, ' + self.name + '!'
 #     def say_goodbye(self):
 #         return 'Goodbye, ' + self.name + '!'
-
-
+class ExampleGreeter():
+    def __init__(self, name):
+        self.name = name
+        
+    def say_hello(self):
+        return "Hello, " + self.name + "!"
+    
+    def goodbye(self):
+        return "Goodbye, " + self.name + "!"
+    
 
 # == EXERCISES ==
 
@@ -63,6 +71,20 @@
 #   'Good night, Bobby!'
 #   > greeter.good_morning('Bobby')
 #   'Good morning, Bobby!'
+class Greeter():
+    def hello(sel, name):
+        return "Hello, " + name + "!"
+    
+    def goodbye(self, name):
+        return "Goodbye, " + name + "!"
+    
+    def good_night(self, name):
+        return "Good night, " + name + "!"
+    
+    def good_morning(self, name):
+        return "Good morning, " + name + "!"
+    
+
 
 
 
